@@ -11,7 +11,7 @@ const newspapers = [
         base: ''
     },
     {
-        name: 'economictimes',
+        name: 'etimes',
         address: 'https://economictimes.indiatimes.com/newslist/82519373.cms',
         base: ''
     },
@@ -49,7 +49,7 @@ app.get('/crypto', (req, res) => {
     res.json(articles)
 })
 
-app.get('/news/:newspaperId', (req, res) => {
+app.get('/crypto/:newspaperId', (req, res) => {
     const newspaperId = req.params.newspaperId
 
     const newspaperAddress = newspapers.filter(newspaper => newspaper.name == newspaperId)[0].address
